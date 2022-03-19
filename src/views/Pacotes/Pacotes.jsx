@@ -50,7 +50,6 @@ export default function Promocoes() {
                     <table className="table table-dark table-striped">
                         <thead>
                             <tr>
-                                <th>Id</th>
                                 <th>Origem</th>
                                 <th>Destino</th>
                                 <th>Preço</th>
@@ -61,7 +60,7 @@ export default function Promocoes() {
                         <tbody>
                             {pacotes.map((pacotes) => (
                                 <tr key={pacotes.id_pacotes}>
-                                    <td>{pacotes.id}</td>
+
                                     <td>{pacotes.origem}</td>
                                     <td>{pacotes.destino}</td>
                                     <td>{pacotes.preco}</td>
