@@ -60,12 +60,11 @@ export default function Promocoes() {
                         <tbody>
                             {pacotes.map((pacotes) => (
                                 <tr key={pacotes.id_pacotes}>
-
                                     <td>{pacotes.origem}</td>
                                     <td>{pacotes.destino}</td>
                                     <td>{pacotes.preco}</td>
-                                    <td>{pacotes.dataida}</td>
-                                    <td>{pacotes.datavolta}</td>
+                                    <td>{pacotes.dataIda}</td>
+                                    <td>{pacotes.dataVolta}</td>
                                     <td className="d-flex">
                                         <Link
                                             to={`/Pacotes-Update/${pacotes.id_pacotes}`}

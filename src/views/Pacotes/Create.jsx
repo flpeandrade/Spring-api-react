@@ -7,15 +7,15 @@ export default function Create() {
   const [origem, setOrigem] = useState("");
   const [destino, setDestino] = useState("");
   const [preco, setPreco] = useState("");
-  const [dataida, setDataIda] = useState("");
-  const [datavolta, setDataVolta] = useState("");
+  const [dataIda, setdataIda] = useState("");
+  const [dataVolta, setdataVolta] = useState("");
   const { id } = useParams();
   const navigate = useNavigate();
 
   const criarOuEditarPacotes = (e) => {
     e.preventDefault();
 
-    const pacotes = { origem, destino, preco, dataida, datavolta };
+    const pacotes = { origem, destino, preco, dataIda, dataVolta };
 
     if (id) {
       PacotesService.updateEditora(id, pacotes).then((response) => {
@@ -36,8 +36,8 @@ export default function Create() {
                 setOrigem(response.data.origem);
                 setDestino(response.data.destino);
                 setPreco(response.data.preco);
-                setDataIda(response.data.dataida);
-                setDataVolta(response.data.datavolta);
+                setdataIda(response.data.dataIda);
+                setdataVolta(response.data.dataVolta);
             })
             .catch((error) => {
                 console.log(error);
@@ -90,37 +90,37 @@ export default function Create() {
               type="numeric"
               id="Preco"
               className="form-control"
-              placeholder="Preco"
+              placeholder="Preço"
               value={preco}
               onChange={(e) => setPreco(e.target.value)}
             />
           </div>
 
           <div className="mb-3">
-            <label htmlFor="DataIda" className="form-label">
+            <label htmlFor="dataIda" className="form-label">
               Data (Ida)
             </label>
             <input
               type="text"
-              id="DataIda"
+              id="dataIda"
               className="form-control"
-              placeholder="DataIda"
-              value={dataida}
-              onChange={(e) => setDataIda(e.target.value)}
+              placeholder="Data Ida"
+              value={dataIda}
+              onChange={(e) => setdataIda(e.target.value)}
             />
           </div>
 
           <div className="mb-3">
-            <label htmlFor="DataVolta" className="form-label">
+            <label htmlFor="dataVolta" className="form-label">
               Data (Volta)
             </label>
             <input
               type="text"
-              id="DataVolta"
+              id="dataVolta"
               className="form-control"
-              placeholder="DataVolta"
-              value={datavolta}
-              onChange={(e) => setDataVolta(e.target.value)}
+              placeholder="Data Volta"
+              value={dataVolta}
+              onChange={(e) => setdataVolta(e.target.value)}
             />
           </div>
 
