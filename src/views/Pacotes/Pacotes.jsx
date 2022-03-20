@@ -59,7 +59,7 @@ export default function Promocoes() {
                         </thead>
                         <tbody>
                             {pacotes.map((pacotes) => (
-                                <tr key={pacotes.id_pacotes}>
+                                <tr key={pacotes.idpacotes}>
                                     <td>{pacotes.origem}</td>
                                     <td>{pacotes.destino}</td>
                                     <td>{pacotes.preco}</td>
@@ -67,14 +67,14 @@ export default function Promocoes() {
                                     <td>{pacotes.dataVolta}</td>
                                     <td className="d-flex">
                                         <Link
-                                            to={`/Pacotes-Update/${pacotes.id_pacotes}`}
+                                            to={`/Pacotes-Update/${pacotes.idpacotes}`}
                                             className="btn btn-info"
                                         >
                                             Editar
                                         </Link>
                                         <button
                                             className="btn btn-danger"
-                                            onClick={() => deletePacotes(pacotes.id_pacotes)}
+                                            onClick={() => deletePacotes(pacotes.idpacotes)}
                                             style={{ marginLeft: "10px" }}
                                         >
                                             Deletar
