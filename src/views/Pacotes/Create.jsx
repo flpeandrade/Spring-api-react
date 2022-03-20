@@ -18,11 +18,11 @@ export default function Create() {
     const pacotes = { origem, destino, preco, dataIda, dataVolta };
 
     if (id) {
-      PacotesService.updateEditora(id, pacotes).then((response) => {
+      PacotesService.updatePacotes(id, pacotes).then((response) => {
         navigate("/Pacotes");
       });
     } else {
-      PacotesService.createEditora(pacotes).then((response) => {
+      PacotesService.createPacotes(pacotes).then((response) => {
         navigate("/Pacotes");
       });
     }
